@@ -1,0 +1,14 @@
+﻿syntax = "proto3";
+
+service GrpcDiver {
+	rpc Dive(DiveRequest) returns (DiveResponse) {}
+}
+
+message DiveRequest {
+	int32 howDeep = 1;
+	int32 waterTemprature = 2;
+}
+
+message DiveResponse {
+	bool wasNice = 1;
+}
