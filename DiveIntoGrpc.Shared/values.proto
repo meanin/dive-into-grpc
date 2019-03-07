@@ -1,0 +1,13 @@
+﻿syntax = "proto3";
+
+service ValueService {
+	rpc GetValues(ValueRequest) returns (ValueResponse) {}
+}
+
+message ValueRequest {
+	int32 count = 1;
+}
+
+message ValueResponse {
+	repeated int32 values = 1;
+}
